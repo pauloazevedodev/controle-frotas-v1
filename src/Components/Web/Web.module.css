@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  /* padding-top: 4rem; */
+  margin: 0px;
+  color: #000;
+  background-color: #eee;
+  letter-spacing: 0.1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0px;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  /* display: block; */
+  font-size: 1rem;
+  font-family: var(--type-first);
+  color: #333;
+}
+/* 
+  Eliminar as arrows do input number 
+  Chrome, Safari, Edge, Opera
+*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+/* input[type='number'] {
+  -moz-appearance: textfield;
+} */
+
+/* input {
+  border: 1px solid #999;
+  padding: 8px;
+  width: 300px;
+} */
+.container {
+  max-width: 50rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.title {
+  font-family: var(--type-second);
+  line-height: 1;
+  font-size: 3rem;
+  margin: 1rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* .title::after {
+  content: '';
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  background: #ff4f4f;
+  position: absolute;
+  bottom: 5px;
+  left: -5px;
+  border-radius: 0.2rem;
+  z-index: -1;
+} */
+
+.animateLeft {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: animateLeft 0.3s forwards;
+}
+
+@keyframes animateLeft {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+.no-autocomplete {
+  color: #999;
+  padding: 8px;
+}
+
+.autocomplete {
+  border: 1px solid #999;
+  border-top-width: 0;
+  list-style: none;
+  margin-top: 0;
+  max-height: 300px;
+  min-width: 100%;
+  overflow-y: auto;
+  padding-left: 0;
+  width: calc(300px + 1rem);
+}
+
+.autocomplete li {
+  padding: 8px;
+}
+
+.autocomplete > .active,
+.autocomplete li:hover {
+  background-color: darkgray;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.autocomplete li:not(:last-of-type) {
+  border-bottom: 1px solid #999;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #17cac2;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+/* 
+  *:hover::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+} */
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* *::-webkit-scrollbar:hover {
+  height: 40px;
+  width: 40px;
+} */
+
+*::-webkit-scrollbar-thumb {
+  background-color: #17cac2;
+  border-radius: 10px;
+  /* height: 10px; */
+  /* border: 3px solid #ffffff; */
+}
